@@ -1,2 +1,3 @@
 # Trabajo-multimedia-
-Trabajo multimedia no creo q haya mas q explicar
+Web de crownfunding de Rhythm Rumble!!
+
