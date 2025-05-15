@@ -1,0 +1,650 @@
+@font-face {
+  font-family: 'multiFont';
+  src: url('fonts/multiFont.ttf') format('truetype');
+}
+
+body, html {
+  scroll-behavior: smooth; 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  font-family: sans-serif; 
+}
+
+section {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; 
+}
+
+/* ESTILO MENU*/
+#menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.661);
+  z-index: 1000;
+}
+
+.menu-toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 80px; 
+  left: 20px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.9); 
+  color: white;
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: none; 
+  z-index: 999;
+  transition: left 0.3s ease-in-out;
+}
+
+.nav-menu.show {
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin: 15px 0;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* PARTE DE INICIO DE LA WEB*/
+
+.Inicio {
+  background-color: #202020; 
+  color: #fff; 
+  text-align: center;
+}
+
+.tituloInicio {
+  font-family: 'multiFont', sans-serif;
+  font-size: 6rem;
+  margin: 0;
+}
+
+.lemaInicio {
+  font-family: 'multiFont', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 15px;
+}
+
+/* EQUIPO */
+
+.Equipo {
+  background-color: #f9f9f9; 
+  color: #000; 
+}
+
+.titulo-descripcion-equipo {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px; 
+  margin-bottom: 20px; 
+}
+
+.titulo-equipo {
+  font-family: 'multiFont', sans-serif;
+  font-size: 4rem; 
+  margin: 0 0 10px 0; 
+  text-align: center;
+}
+
+.descripcion-equipo {
+  font-size: 1.2rem; 
+  color: #333;
+  margin: 0;
+  text-align: center;
+  max-width: 80%; 
+}
+
+.equipo-logo {
+  margin-bottom: 20px;
+}
+
+.equipo-logo img {
+  width: 200px;
+  height: auto;
+}
+
+.equipo-miembros {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px; 
+  flex-wrap: wrap; 
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.miembro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px; 
+}
+
+.miembro img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 10%; 
+  margin-bottom: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.miembro h3 {
+  font-family: sans-serif;
+  font-size: 1.2rem; 
+  margin: 5px 0; 
+}
+
+.miembro p {
+  font-family: sans-serif;
+  font-size: 1rem; 
+  line-height: 1.4; 
+  margin: 0;
+}
+
+.equipo-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; 
+  margin-bottom: 30px; 
+}
+
+.logo-empresa {
+  width: 300px; 
+  height: auto;
+}
+
+.logo-juego {
+  width: 700px; 
+  height: auto;
+}
+
+/* PARTE GAMEPLAY*/
+.Gameplay {
+  background-color: #3b1c1c; 
+  color: #fff; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+
+.video-texto-gameplay{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;  
+  align-items: center;
+}
+
+.video {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video video {
+  width: 90%;
+  height: auto;
+  border: 3px solid #2b2929;
+}
+
+.gameplay-texto {
+  flex: 1; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gameplay-texto h2{
+  font-family: 'multiFont', sans-serif; 
+  font-size: 3.5rem;
+  margin: 0 0 20px 0;    
+}
+
+.gameplay-texto p{
+  font-family: sans-serif; 
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  margin: 0;
+}
+
+/* SECCION CAMPAÑA */
+.Campana {
+  background-color: #f9f9f9;
+  color: #000; 
+  padding: 30px 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+}
+
+.titulo-campana {
+  font-size: 4rem; 
+  font-family: 'multiFont', sans-serif; 
+  margin-top: 0; 
+  margin-bottom: 15px; 
+  text-align: center;
+}
+
+.contenido-campana {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px; 
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contribuciones, .objetivos {
+  flex: 1;
+}
+
+.contribuciones h3, .objetivos h3 {
+  font-size: 2.3rem;
+  font-family: 'multiFont', sans-serif;
+  margin-bottom: 10px; 
+  text-align: center;
+}
+
+.contribucion {
+  margin-bottom: 8px; 
+}
+
+.contribucion h4 {
+  font-size: 1.2rem; 
+  font-family: 'multiFont', sans-serif;
+  margin-bottom: 5px; 
+}
+
+.contribucion p, .contribucion ul li {
+  font-size: 1rem; 
+  font-family: sans-serif; 
+}
+
+.contribucion p {
+  margin-bottom: 5px; 
+}
+
+.contribucion ul {
+  list-style: disc;
+  padding-left: 15px; 
+}
+
+.contribucion ul li {
+  margin-bottom: 3px; 
+}
+.barra-progreso-unica {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 20px; 
+  width: 100%;
+}
+
+.progreso-total {
+  width: 20px; 
+  height: 400px; 
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse; 
+}
+
+.progreso-actual {
+  width: 100%; 
+  height: 45%; 
+  background-color: #3b1c1c; 
+  border-radius: 10px 10px 0 0; 
+  transition: height 0.5s ease-in-out; 
+}
+
+.lista-objetivos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 400px; 
+  font-size: 1rem;
+}
+
+.lista-objetivos li {
+  position: relative;
+  font-size: 0.9rem; 
+  text-align: left;
+}
+
+.lista-objetivos li::before {
+  content: '';
+  position: absolute;
+  left: -20px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; 
+  height: 8px; 
+  background-color: #3b1c1c;
+  border-radius: 50%; 
+}
+
+/* Botón DONAR AHORA */
+.boton-donar {
+  margin-top: 15px; 
+  padding: 15px 30px; 
+  font-size: 1.5rem;
+  font-family: 'multiFont', sans-serif;
+  color: #fff;
+  background-color: #3b1c1c; 
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-donar:hover {
+  background-color: #5a2a2a; 
+  transform: scale(1.05); 
+}
+
+/* SECCION JUEGO */
+.Juego {
+  background-color: #3b1c1c; 
+  color: #fff; 
+  padding: 40px 15px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-juego {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+  max-width: 1200px; 
+  width: 100%;
+  align-items: center;
+}
+
+.imagen-juego {
+  flex: 2; 
+  display: flex;
+  justify-content: center;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  max-width: 800px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texto-juego {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  gap: 15px; 
+}
+
+.caja-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.titulo-juego {
+  font-size: 3.5rem; 
+  font-family: 'multiFont', sans-serif;
+  margin-bottom: 10px; 
+  text-align: center;
+}
+
+.cuadro-texto {
+  background-color: rgba(255, 255, 255, 0.1); 
+  padding: 15px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  text-align: center;
+}
+
+.cuadro-texto h3 {
+  font-size: 1.6rem; 
+  font-family: 'multiFont', sans-serif; 
+  margin-bottom: 8px; 
+}
+
+.cuadro-texto p {
+  font-size: 1rem; 
+  line-height: 1.5; 
+  color: #fff;
+}
+
+/* SECCION FAQ */
+.FAQ {
+  background-color: #fff; 
+  color: #000; 
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.titulo-faq {
+  font-size: 4rem; 
+  font-family: 'multiFont', sans-serif; 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tabla-faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.caja-pregunta {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  text-align: left;
+  width: 100%; 
+  max-width: 400px; 
+}
+
+.caja-pregunta h3 {
+  font-size: 1.5rem;
+  font-family: 'multiFont', sans-serif; 
+  margin-bottom: 10px;
+}
+
+.caja-pregunta p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* SECCION COMENTARIOS */
+.Comentarios {
+  background-color: #5a2a2a;
+  color: #000;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-comentarios {
+  font-size: 3.5rem; 
+  font-family: 'multiFont', sans-serif; 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contenido-comentarios {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* SECCION AUTORÍA Y DISCLAIMER */
+.Autoria {
+  background-color: #202020;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 50vh;
+}
+
+.contenido-autoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  max-width: 800px;
+}
+
+.logo-y-texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-equipo img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texto-autor h3 {
+  font-size: 1.5rem;
+  font-family: 'multiFont', sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+.disclaimer p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* LOGO FIJO EN LA ESQUINA INFERIOR DERECHA */
+.logo-fijo {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+}
+
+.logo-juego-fijo {
+  width: 80px; 
+  height: auto;
+  opacity: 0.7; 
+  transition: opacity 0.3s ease; 
+  cursor: pointer;
+}
+
+.logo-juego-fijo:hover {
+  opacity: 1; 
+}
+
+/* AUDIO */
+
+.audio-fijo {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px;
+  z-index: 1000; 
+}
+
+.mute-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mute-icon {
+  width: 30px; 
+  height: auto;
+  opacity: 0.7; 
+  transition: opacity 0.3s ease;
+}
+
+.mute-icon:hover {
+  opacity: 1; 
+}
